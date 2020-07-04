@@ -1,0 +1,15 @@
+.posts-main-wrpper {
+  width: 80%;
+  height: 100vh;
+  background-color: grey;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  .posts-box {
+    width: 200px;
+    height: 200px;
+    background-color: lavender;
+    margin: 15px 0 0 15px;
+  }
+}

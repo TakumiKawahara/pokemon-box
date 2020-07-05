@@ -1,2 +1,11 @@
 .header__top
   .header__top__title pokemon-box
+  .header__top__serch 探す
+.header__bottom
+  .send-btn
+    = link_to "", new_post_path
+  .header__bottom__boxes
+    .header__bottom__boxes__box
+      = link_to "新規登録", new_user_registration_path, class: "registar"
+    .header__bottom__boxes__box 
+      = link_to "ログアウト", destroy_user_session_path, class: "registar"

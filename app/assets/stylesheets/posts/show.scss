@@ -1,0 +1,33 @@
+.show-wrapper {
+  &__box{
+    background-color: lightskyblue;
+    width: 80%;
+    height: 100vh;
+    border-radius: 50px;
+    margin: 0 auto 0;
+    padding-top: 5px;
+    .show-title {
+      width: 80%;
+      background-color: #ffffff;
+      border-radius: 50px;
+      border: solid 3px black;
+      margin: 0 auto 0;
+    }
+    .show-text {
+      width: 80%;
+      height: 70vh;
+      background-color: #ffffff;
+      border-radius: 50px;
+      border: solid 3px black;
+      margin: 5px auto 0;
+    }
+  }
+}
+
+.show-text  p {
+  padding: 10px 20px 10px 20px;
+}
+
+.show-title  p {
+  text-align: center;
+}

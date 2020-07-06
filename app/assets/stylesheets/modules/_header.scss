@@ -29,17 +29,29 @@
       margin: 5px 5px 0 0;
       line-height: 40px;
       text-align: center;
-      .registar {
-       
+      text-decoration: none;
+      color: black;
+    }
+    .send-btn{
+      height: 40px;
+      width: 200px;
+      background-color: #ffffff;
+      margin: 5px 5px 0 5px;
+      line-height: 40px;
+      text-align: center;
+      text-decoration: none;
+      color: black;
+      &__box{
+        
       }
     }
   }
-  .send-btn {
-    height: 40px;
-    width: 200px;
-    background-color: #ffffff;
-    line-height: 40px;
-    text-align: center;
-    margin: 5px 5px 0 5px;
-  }
+  // .send-btn {
+  //   height: 40px;
+  //   width: 200px;
+  //   background-color: #ffffff;
+  //   line-height: 40px;
+  //   text-align: center;
+  //   margin: 5px 5px 0 5px;
+  // }
 }

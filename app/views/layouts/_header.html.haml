@@ -3,11 +3,13 @@
   .header__top__serch 探す
 .header__bottom
   .header__bottom__boxes
-    = link_to "投稿する", new_post_path, class:"send-btn"
-    .send-btn__box
+    - if user_signed_in?
+      = link_to "投稿する", new_post_path, class:"send-btn"
+      .send-btn__box
+    = link_to "ポケモン図鑑", pokemon_statuses_path, class: "header__bottom__boxes__box"
   - if user_signed_in?
     .header__bottom__boxes
-      = link_to "マイページ", root_path, class: "header__bottom__boxes__box"
+      = link_to "マイページ", users_path, class: "header__bottom__boxes__box"
       = link_to "ログアウト", destroy_user_session_path, class: "header__bottom__boxes__box"
   - else
     .header__bottom__boxes

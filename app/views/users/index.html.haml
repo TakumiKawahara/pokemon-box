@@ -1,1 +1,7 @@
-.users_wrapper マイページ
+.users_wrapper 
+  .users_wrapper__box
+    .users_wrapper__box__title 記事一覧
+    .users_wrapper__box__content
+      - @posts.each do |post|
+        = post.title
+        = post.text

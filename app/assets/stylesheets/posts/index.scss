@@ -1,14 +1,15 @@
 .posts-main-wrpper {
   width: 80%;
-  height: 100vh;
+  height: 100%;
   background-color: grey;
   margin: 0 auto;
+  padding: 15px 10px 0 15px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   overflow: scroll;
   .posts-box {
-    margin: 15px 0 0 15px;
+    margin: 0px 7px 14px 7px;
     text-decoration: none;
     .posts-box__show {
       width: 200px;

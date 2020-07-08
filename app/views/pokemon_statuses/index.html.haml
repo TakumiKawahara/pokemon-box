@@ -1,0 +1,7 @@
+.pokemons-wrapper
+  - @pokemons.each do |pokemon|
+    .pokemons-box
+      .pokemons-box__name
+        = pokemon.name
+      .pokemons-box__total
+        = pokemon.total

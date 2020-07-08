@@ -65,3 +65,7 @@ gem 'devise'
 
 gem 'haml-rails'
 gem 'erb2haml'
+
+gem 'pry-rails'
+
+gem 'kaminari'

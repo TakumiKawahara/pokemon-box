@@ -48,3 +48,6 @@
 | speed            |integer            |                    |
 | total            |integer            |                    |
 
+#DEMO
+https://gyazo.com/9241547488bf0fe2545b58373fe6aa05
+https://gyazo.com/6533fe558c436672e14fc0ac51caa470

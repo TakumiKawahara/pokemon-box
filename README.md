@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#アプリ名
+##pokemon-box
 
-Things you may want to cover:
+#制作背景
+##ポケモンのゲームで遊んでいると、自分で育成した個体の調整を忘れることがありました。それを管理するためにこのアプリを作ろうと思いました。
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#DB設計
+##usersテーブル
+###
+| column           |type               |options             |
+|------------------|-------------------|--------------------|
+| email            |string             |null:false          |
+| password         |string             |null:false          |

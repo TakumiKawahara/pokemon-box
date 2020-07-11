@@ -61,9 +61,9 @@ PokeAPIから個別のポケモンデータを取得して、自分の努力値�
 
 # DEMO
 
-投稿機能
+①投稿機能
 ![demo](https://gyazo.com/9241547488bf0fe2545b58373fe6aa05/raw)
 
 # 
-図鑑機能
+②図鑑機能
 ![demo](https://gyazo.com/7d0d03a6a2d48b5a916e0def824da210/raw)

@@ -6,7 +6,13 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-  resources :posts, only: [:index, :new, :create, :show]
+  resources :posts, only: [:index, :new, :create, :show, :edit, :update, :destroy]
+  resources :posts do
+    collection do
+      get :search
+    end
+  end
+  
   resources :users, only: [:index, :new, :create, :show]
   resources :pokemon_statuses, only: [:index, :show]
 end

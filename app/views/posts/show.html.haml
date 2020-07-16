@@ -1,8 +1,11 @@
 .show-wrapper
   .show-wrapper__box
     .show-title
-      %p
+      %div
         = @post.title
     .show-text
-      %p
+      %div
         = @post.text
+    - if @post.user_id == current_user.id
+      .show-edit
+        = link_to "修正する", edit_post_path, class: "edit-btn"

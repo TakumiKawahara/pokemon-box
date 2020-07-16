@@ -1,0 +1,10 @@
+.posts-main-wrpper
+  - @posts.each do |post|
+    = link_to post_path(post), class: 'posts-box' do
+      .posts-box__show
+        .post-title
+          = post.title
+        .post-text
+          = post.text
+        .post-continue
+          <続きを読む>

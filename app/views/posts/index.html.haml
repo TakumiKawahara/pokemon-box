@@ -1,11 +1,9 @@
 .posts-search
-  = search_form_for @q do |form|
-    = form.label :title_or_text, "Keyword"
-    = form.search_field :title_or_text_cont
-    = form.submit "検索"
-  -# = search_form_for @q, url: search_posts_path, class: "posts-serch__form" do |form|
-  -#   = form.text_field :text_cont, placeholder: "投稿を検索する", class: "posts-serch__form--input"
-  -#   = form.submit "検索", class: "posts-serch__form--btn"
+  = search_form_for @q, class: "posts-serch__form" do |form|
+    = form.search_field :title_or_text_cont, placeholder: "記事を検索する", class: "posts-serch__form--input"
+    = form.submit "検索", class: "posts-serch__form--btn" do
+      = icon('fa','search')
+.posts-result　記事一覧
 .posts-main-wrpper
   - @posts.each do |post|
     = link_to post_path(post), class: 'posts-box' do
@@ -13,6 +11,6 @@
         .post-title
           = post.title
         .post-text
-          = post.text
+          = post.text.truncate(60)
         .post-continue
           <続きを読む>

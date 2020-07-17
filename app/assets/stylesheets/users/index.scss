@@ -4,11 +4,16 @@
   background-color: pink;
   margin: 0 auto;
   &__box {
-    &__title {
+    &__index {
 
     }
-    &__content{
-      
+    &__content {
+      &--title {
+        font-size: 40px;
+      }
+      &--text{
+        font-size: 20px;
+      }
     }
   }
 }

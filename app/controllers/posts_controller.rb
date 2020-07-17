@@ -6,7 +6,7 @@ class PostsController < ApplicationController
     @posts = Post.all.order("created_at DESC")
 
     @q = Post.ransack(params[:q])
-    @posts = @q.result(distinct: true)
+    @posts = @q.result(distinct: true).order("created_at DESC")
   end
 
   def new

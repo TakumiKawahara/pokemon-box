@@ -1,7 +1,9 @@
 .users_wrapper 
   .users_wrapper__box
-    .users_wrapper__box__title 記事一覧
+    .users_wrapper__box__index 記事一覧
     .users_wrapper__box__content
       - @posts.each do |post|
-        = post.title
-        = post.text
+        .users_wrapper__box__content--title
+          = post.title
+        .users_wrapper__box__content--text
+          = post.text.truncate(60)

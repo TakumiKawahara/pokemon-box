@@ -3,7 +3,8 @@
     .users_wrapper__box__index 記事一覧
     .users_wrapper__box__content
       - @posts.each do |post|
-        .users_wrapper__box__content--title
-          = post.title
-        .users_wrapper__box__content--text
-          = post.text.truncate(60)
+        = link_to post_path(post), class: 'posts-box' do
+          .users_wrapper__box__content--title
+            = post.title
+          .users_wrapper__box__content--text
+            = post.text.truncate(60)

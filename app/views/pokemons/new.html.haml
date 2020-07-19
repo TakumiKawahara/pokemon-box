@@ -1,0 +1,12 @@
+%h1 Pokemon
+%div
+  %table
+    %tr
+      %td No.
+      %td= @response["base_experience"]
+    %tr
+      %td Name:
+      %td= @response["name"]
+    %tr
+      
+  = image_tag(@response["sprites"]["front_default"], size: "200")

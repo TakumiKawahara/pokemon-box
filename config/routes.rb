@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pokemons/new'
   root "posts#index"
   get "posts/index"
   get 'user/search' => 'users#search'
@@ -16,4 +17,6 @@ Rails.application.routes.draw do
   
   resources :users, only: [:index, :new, :create, :show]
   resources :pokemon_statuses, only: [:index, :show]
+
+  resources :pokemons
 end

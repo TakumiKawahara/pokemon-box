@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_07_095613) do
+ActiveRecord::Schema.define(version: 2020_07_07_082414) do
 
   create_table "pokemon_statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "no"
@@ -23,12 +23,7 @@ ActiveRecord::Schema.define(version: 2020_07_07_095613) do
     t.integer "special_attack"
     t.integer "special_deffence"
     t.integer "speed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
     t.integer "total"
-  end
-
-  create_table "pokemons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

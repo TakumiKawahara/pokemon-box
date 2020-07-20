@@ -19,4 +19,6 @@ Rails.application.routes.draw do
   resources :pokemon_statuses, only: [:index, :show]
 
   resources :pokemons
+
+  resources :pokemon_balls
 end

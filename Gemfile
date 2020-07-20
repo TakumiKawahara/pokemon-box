@@ -76,3 +76,6 @@ gem 'font-awesome-rails'
 gem 'ransack'
 
 gem 'faraday'
+
+gem 'carrierwave'
+gem 'mini_magick'

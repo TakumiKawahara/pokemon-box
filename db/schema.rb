@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_07_082414) do
+ActiveRecord::Schema.define(version: 2020_07_19_170415) do
+
+  create_table "balls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "ball_name"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "pokemon_balls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "ball_id"
+    t.bigint "pokemon_status_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ball_id"], name: "index_pokemon_balls_on_ball_id"
+    t.index ["pokemon_status_id"], name: "index_pokemon_balls_on_pokemon_status_id"
+    t.index ["user_id"], name: "index_pokemon_balls_on_user_id"
+  end
 
   create_table "pokemon_statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.integer "no"
@@ -49,5 +67,7 @@ ActiveRecord::Schema.define(version: 2020_07_07_082414) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "pokemon_balls", "balls"
+  add_foreign_key "pokemon_balls", "users"
   add_foreign_key "posts", "users"
 end

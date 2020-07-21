@@ -1,12 +1,8 @@
-%h1 Pokemon
-%div
-  %table
-    %tr
-      %td No.
-      %td= @response["base_experience"]
-    %tr
-      %td Name:
-      %td= @response["name"]
-    %tr
-      
-  = image_tag(@response["sprites"]["front_default"], size: "200")
+-# - form_with(model: @pokem, local: true) do |f|
+-#   .check__form
+-#     = f.collection_check_boxes :ball_ids, Ball.all, :id, :ball_name 
+-#     = f.submit
+= form_with(model: @pomekon, local: true) do |f|
+  = f.text_field :pkname
+  = f.collection_check_boxes :ball_ids, Ball.all, :id, :ball_name 
+  = f.submit

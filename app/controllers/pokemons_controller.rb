@@ -1,8 +1,17 @@
 class PokemonsController < ApplicationController
   def new
-    raw_response = Faraday.get "https://pokeapi.co/api/v2/pokemon/"
-    @response = JSON.parse(raw_response.body)
+    @pokemon = Pokemon.new
 
-    @response_image = Faraday.get "https://github.com/fanzeyi/pokemon.json/blob/master/images/001"
+    @ball = Ball.all
+  end
+
+  def create
+    Pokemon.create(pokemen_params)
+    
+  end
+
+  private
+  def pokemon_params
+    params.require(:pokemon).permit(:pkmane).merge(user_id: current_user.id)
   end
 end

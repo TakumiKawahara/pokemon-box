@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_19_170415) do
+ActiveRecord::Schema.define(version: 2020_07_20_202811) do
 
   create_table "balls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "ball_name"
@@ -20,14 +20,12 @@ ActiveRecord::Schema.define(version: 2020_07_19_170415) do
   end
 
   create_table "pokemon_balls", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
     t.bigint "ball_id"
-    t.bigint "pokemon_status_id"
+    t.bigint "pokemon_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ball_id"], name: "index_pokemon_balls_on_ball_id"
-    t.index ["pokemon_status_id"], name: "index_pokemon_balls_on_pokemon_status_id"
-    t.index ["user_id"], name: "index_pokemon_balls_on_user_id"
+    t.index ["pokemon_id"], name: "index_pokemon_balls_on_pokemon_id"
   end
 
   create_table "pokemon_statuses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -44,6 +42,14 @@ ActiveRecord::Schema.define(version: 2020_07_19_170415) do
     t.integer "total"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "pokemons", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "pkmane"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pokemons_on_user_id"
   end
 
   create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -68,6 +74,6 @@ ActiveRecord::Schema.define(version: 2020_07_19_170415) do
   end
 
   add_foreign_key "pokemon_balls", "balls"
-  add_foreign_key "pokemon_balls", "users"
+  add_foreign_key "pokemons", "users"
   add_foreign_key "posts", "users"
 end

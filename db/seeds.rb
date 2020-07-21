@@ -503,3 +503,4 @@ Ball.create({ball_name:"repeatball", image: open("#{Rails.root}/app/assets/image
 Ball.create({ball_name:"sportball", image: open("#{Rails.root}/app/assets/images/balls/sportball.png")})
 Ball.create({ball_name:"timerball", image: open("#{Rails.root}/app/assets/images/balls/timerball.png")})
 Ball.create({ball_name:"ultraball", image: open("#{Rails.root}/app/assets/images/balls/ultraball.png")})
+Ball.create({ball_name:"beastball", image: open("#{Rails.root}/app/assets/images/balls/beastball.png")})

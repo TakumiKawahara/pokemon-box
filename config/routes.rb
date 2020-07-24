@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :new, :create, :show]
   resources :pokemon_statuses, only: [:index, :show]
 
-  resources :pokemons, only: [:new, :create]
+  resources :pokemons
+  resources :balls
 
   resources :pokemon_balls
 end

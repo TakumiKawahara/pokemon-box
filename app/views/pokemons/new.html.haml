@@ -4,5 +4,7 @@
 -#     = f.submit
 = form_with(model: @pomekon, local: true) do |f|
   = f.text_field :pkname
-  = f.collection_check_boxes :ball_ids, Ball.all, :id, :ball_name 
-  = f.submit
+  .ball__form
+    = f.collection_check_boxes :ball_ids, Ball.all, :id, :ball_name 
+  .submit__btn
+    = f.submit

@@ -7,7 +7,6 @@ class PokemonsController < ApplicationController
 
   def create
     Pokemon.create(pokemen_params)
-    # binding.pry
   end
 
   private

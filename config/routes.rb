@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pokemon_images/bew'
   root "posts#index"
   get "posts/index"
   get 'user/search' => 'users#search'

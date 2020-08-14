@@ -5,15 +5,27 @@
   margin: 0 auto;
   &__box {
     &__index {
-
+      margin-left: 5px;
     }
     &__content {
+      width: 200px;
+      height: 200px;
+      background-color: lavender;
+      border: solid;
+      color: black;
       &--title {
-        font-size: 40px;
+        height: 25px;
+        text-align: center;
+        border-bottom: solid;
+        color: black;
       }
       &--text{
-        font-size: 20px;
+        color: black;
       }
     }
   }
+}
+
+.posts-box {
+  text-decoration: none;
 }

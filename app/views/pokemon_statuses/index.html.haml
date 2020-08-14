@@ -5,11 +5,11 @@
         = "No. #{pokemon.no}"
         = "名前　#{pokemon.name}"
       .pokemons-box__status
-        = "H : #{pokemon.hp}"
-        = "A : #{pokemon.attack}"
-        = "B : #{pokemon.deffence}"
-        = "C : #{pokemon.special_attack}"
-        = "D : #{pokemon.special_deffence}"
-        = "S : #{pokemon.speed}"
+        = "H:#{pokemon.hp} "
+        = "A:#{pokemon.attack} "
+        = "B:#{pokemon.deffence} "
+        = "C:#{pokemon.special_attack} "
+        = "D:#{pokemon.special_deffence} "
+        = "S:#{pokemon.speed} "
   .page
     = paginate(@pokemons)
